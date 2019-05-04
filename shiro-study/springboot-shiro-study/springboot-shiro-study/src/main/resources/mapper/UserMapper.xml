@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.woodwhales.king.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="org.woodwhales.king.entity.User">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+		<result column="perms" jdbcType="VARCHAR" property="roles" />
+    </resultMap>
+
+    <select id="findUserByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">
+	SELECT 	id,
+		USER_NAME,
+		PASSWORD,
+		ROLES
+		FROM
+		user where user_name = #{userName, jdbcType=VARCHAR}
+	</select>
+
+    <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+		SELECT id,
+		USER_NAME,
+		PASSWORD,
+		ROLES
+		FROM
+		user where id = #{id, jdbcType=BIGINT}
+	</select>
+</mapper>

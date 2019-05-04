@@ -1,0 +1,23 @@
+server:
+  address: 127.0.0.1
+  port: 8080
+
+spring:
+  thymeleaf:
+    cache: false
+  datasource: 
+    driver-class-name: org.h2.Driver
+    schema: classpath:db/schema-h2.sql
+    data: classpath:db/data-h2.sql
+    url: jdbc:h2:mem:test
+    username: root
+    password: root
+    
+logging:
+  level: 
+    org.woodwhales.king: DEBUG
+  file: ./logs/shiro.log
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
