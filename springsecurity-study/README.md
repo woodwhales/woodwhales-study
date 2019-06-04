@@ -16,4 +16,4 @@ Spring Boot  + Spring Security
 
 导图原址：<https://github.com/shimingda/security>
 
-![](.\images\安全相关知识点.png)
+![](https://github.com/woodwhales/woodwhales-study/blob/master/springsecurity-study/images/security.png)
