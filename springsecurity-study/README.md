@@ -11,3 +11,9 @@ Spring Boot  + Spring Security
 4. [SpringBoot + Spring Security 学习笔记（四）记住我功能实现](https://woodwhales.github.io/2019/04/12/029/)
 
 5. [SpringBoot + Spring Security 学习笔记（五）实现短信验证码+登录功能](https://woodwhales.github.io/2019/04/24/030/)
+
+安全认证相关知识考察点思维导图
+
+导图原址：<https://github.com/shimingda/security>
+
+![](images\安全相关知识点.png)
