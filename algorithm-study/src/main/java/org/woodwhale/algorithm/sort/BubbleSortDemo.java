@@ -14,7 +14,7 @@ public class BubbleSortDemo {
 	}
 	
 	/**
-	 * 	冒泡排序
+	 * 	冒泡排序（推荐）
 	 * 	外层循环控制排序趟数，每次要找出最大值，因此至少跑 length-1 趟
 	 *  内层循环控制每一趟排序多少次，也就是剩余未确定数字俩俩比较，大的在前，小的在后
 	 *  
@@ -48,7 +48,7 @@ public class BubbleSortDemo {
 	}
 
 	/**
-	 * 	冒泡排序
+	 * 	冒泡排序（不推荐）
 	 */
 	private static void bubbleSort(int [] array) {
 		int length = array.length;
