@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.woodwhale.algorithm</groupId>
-	<artifactId>algorithm</artifactId>
+	<artifactId>algorithm-study</artifactId>
 	<version>1.0</version>
 	<name>algorithm</name>
 	<description>Algorithm Study</description>
