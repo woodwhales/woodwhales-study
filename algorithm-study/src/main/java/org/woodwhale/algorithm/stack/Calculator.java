@@ -1,5 +1,16 @@
 package org.woodwhale.algorithm.stack;
 
+/**
+ * 	中缀表达式
+ * 	从左到右依次扫描表达式：
+ * 		当遇到数字时压入数据栈中
+ *		当遇到运算符时，判断当前要压入运算符栈的运算符和运算符栈里面当前栈顶的运算符的优先级，
+ *			如果当前要压栈的运算符比当前运算符栈栈顶的运算符优先级小或等于的时候，
+ *				需要从数据栈弹出两个数字，再从当前运算栈弹出一个运算符，进行计算，将计算后的结果压入数据栈中，最后再将当前要压的运算符压入栈中。
+ *			否则正常压入运算符栈。
+ *		当扫描完毕，再依次从运算符栈中弹出一个运算符，并从数据栈中弹出两个数据进行计算，将运算的结果压入数据栈中，
+ *		反复操作，直到运算符栈的所有运算符都弹栈为止，此时数据栈一定只剩下一个数据，这个数据就是最终计算结果，直接弹出来即可。
+ */
 public class Calculator {
 
 	public static void main(String[] args) {
@@ -29,18 +40,14 @@ public class Calculator {
 				operStack.push(val);
 				
 			} else { // 是数字存入数栈
-				
+				// 当前数字的下一个字符也可能是数字，所以需要拼接字符串
 				String keepNum = "" + val;
 				
 				// 看一下下一位字符是不是数字，是数字就拼接成数字字符串
 				char tempChar = expression.charAt(index+1);
-				while(!isOper(tempChar)) {
-					
-					// 防止当前数字已经是最后一个位置了
-					if(index+1 == length) {
-						break;
-					}
-					
+				
+				// 防止当前数字已经是最后一个位置了
+				while(((index+1) != length) && !isOper(tempChar)) {
 					tempChar = expression.charAt(++index);
 					keepNum += tempChar;
 				}
