@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 	选择排序
  *
  */
-public class SelectSortDemo {
+public class SelectSort {
 
 	public static void main(String[] args) {
 		int[] arr = {-1, 2, 4, 6, 3, 1};

@@ -4,7 +4,7 @@ package org.woodwhale.algorithm.sparse;
  *	稀疏数组与原二维数组的互转
  *
  */
-public class SparseArrayDemo {
+public class SparseArray {
 
 	public static void main(String[] args) {
 		// 1. 生成棋盘

@@ -6,7 +6,7 @@ import java.util.Arrays;
  *	快速排序
  *
  */
-public class QuickSortDemo {
+public class QuickSort {
 
 	public static void main(String[] args) {
 		int[] arr = {4, 3, 6, 7, 5, 8, 9, 1, 2};

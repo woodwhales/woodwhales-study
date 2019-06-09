@@ -23,7 +23,7 @@ public class EightQueensDemo {
 
 	private int max;
 	private int[] arr;
-	static int count = 0;
+	public static int count = 0;
 	
 	public EightQueensDemo(int max) {
 		this.max = max;
@@ -33,7 +33,7 @@ public class EightQueensDemo {
 	public static void main(String[] args) {
 		EightQueensDemo eightQueens = new EightQueensDemo(8);
 		eightQueens.check(0);
-		System.out.printf("共有%d种解\n", eightQueens.count);
+		System.out.printf("共有%d种解\n", EightQueensDemo.count);
 	}
 	
 	/**

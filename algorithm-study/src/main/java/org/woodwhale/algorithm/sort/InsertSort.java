@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 	插入排序
  *
  */
-public class InsertSortDemo {
+public class InsertSort {
 
 	public static void main(String[] args) {
 		int[] arr = {-1, 2, 4, 6, 3, 1, -3, 9};

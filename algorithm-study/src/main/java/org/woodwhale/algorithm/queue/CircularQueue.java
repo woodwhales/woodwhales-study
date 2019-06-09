@@ -1,7 +1,7 @@
 package org.woodwhale.algorithm.queue;
 
 /**
- * 《数据结构与算法之美》 源码
+ *	《数据结构与算法之美》 源码
  * Created by wangzheng on 2018/10/9.
  * Updated by woodwhales on 2019/06/04.
  */
