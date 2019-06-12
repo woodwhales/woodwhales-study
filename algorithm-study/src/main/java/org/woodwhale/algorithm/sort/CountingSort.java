@@ -6,7 +6,7 @@ import java.util.Arrays;
  *	 计数排序初版（不推荐，这种写法[不稳定] ）
  *
  */
-public class CountSimpleSort {
+public class CountingSort {
 
 	public static void main(String[] args) {
 		int[] arr = { 12, 19, 13, 18, 11, 14, 16, 15, 17, 15, 16, 14, 11, 13, 12, 18, 17, 19, 12, 13, 15, 14, 11, 16, 10 };

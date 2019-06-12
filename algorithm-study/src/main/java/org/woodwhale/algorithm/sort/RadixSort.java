@@ -3,14 +3,14 @@ package org.woodwhale.algorithm.sort;
 import java.util.Arrays;
 
 /**
- * 	计数排序
+ * 	基数排序
  * 	适用条件：数据量比较大，数据存在一定的范围之间，
  * 	特点：不需要比较就能排序
  * 
- * 	先参考  CountSimpleSort 例子，明白什么是最基本的计数排序
+ * 	先参考计数排序 CountingSort.java 例子，明白什么是最基本的计数排序
  *
  */
-public class CountSort {
+public class RadixSort {
 
 	public static void main(String[] args) {
 		int[] arr = { 12, 19, 13, 18, 11, 14, 16, 15, 17, 15, 16, 14, 11, 13, 12, 18, 17, 19, 12, 13, 15, 14, 11, 16, 10 };
