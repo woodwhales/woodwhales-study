@@ -16,12 +16,13 @@ public class HuffmanCoding {
 	private static StringBuilder str = new StringBuilder("");
 
 	public static void main(String[] args) {
-		String content = "i like like like java do you like a java";
+		String content = "i like like like java do you like a java ha ha ha";
 
 		// 编码
 		byte[] huffmanCodeBytes = encode(content);
 		// 解码
-		String result = decode(huffmanCodeBytes, huffmanCodeMap);
+		byte[] bytes = decode(huffmanCodeBytes, huffmanCodeMap);
+		String result = new String(bytes);
 		System.out.println(result);
 	}
 
@@ -37,13 +38,13 @@ public class HuffmanCoding {
 	 * @param huffmanCodeMap
 	 * @return
 	 */
-	public static String decode(byte[] huffmanCodeBytes, Map<Byte, String> huffmanCodeMap) {
+	public static byte[] decode(byte[] huffmanCodeBytes, Map<Byte, String> huffmanCodeMap) {
 
 		String huffmanCodeBinaryStr = getHuffmanCodeBinaryStr(huffmanCodeBytes);
 		
 		byte[] bytes = decodeByHuffmanCodeMap(huffmanCodeBinaryStr, huffmanCodeMap);
 		
-		return new String(bytes);
+		return bytes;
 	}
 
 	/**
@@ -60,7 +61,7 @@ public class HuffmanCoding {
 		
 		int index = 0;
 		Byte data = null;
-		int count = 0;
+		int count = 1;
 		while(index < huffmanCodeBinaryStr.length()) {
 			data = swapedMap.get(huffmanCodeBinaryStr.substring(index, index + count));
 			if(data == null) {
@@ -95,6 +96,25 @@ public class HuffmanCoding {
 	}
 
 	/**
+	 * 将编码的霍夫曼编码字节数组转成二进制数据的十进制字符串
+	 * 
+	 * @param huffmanCodeBytes
+	 * @return
+	 */
+	private static String getHuffmanCodeBinaryStr(byte[] huffmanCodeBytes) {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < huffmanCodeBytes.length; i++) {
+			// 最后一位字节数据不能补高位，补了就是前面多了0，那么解码就会失败
+			boolean needFill = (i == huffmanCodeBytes.length - 1);
+			
+			String binaryString = byteToBinaryString(huffmanCodeBytes[i], !needFill);
+			sb.append(binaryString);
+		}
+		
+		return sb.toString();
+	}
+
+	/**
 	 * 	将一个byte数据转成二进制对应的十进制字符串
 	 * @param data 要转的byte数据 
 	 * @param needFill 标志是否需要补高位，true表示需要补，false 表示不需要补，如果是最后一个字节，不需要补高位
@@ -114,27 +134,6 @@ public class HuffmanCoding {
 		}
 		
 		return binaryString;
-	}
-
-	/**
-	 * 将编码的霍夫曼编码字节数组转成二进制数据的十进制字符串
-	 * 
-	 * @param huffmanCodeBytes
-	 * @return
-	 */
-	private static String getHuffmanCodeBinaryStr(byte[] huffmanCodeBytes) {
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < huffmanCodeBytes.length; i++) {
-			// 最后一位字节数据不能补高位，补了就是前面多了0，那么解码就会失败
-			boolean needFill = (i == huffmanCodeBytes.length - 1);
-			
-			String binaryString = byteToBinaryString(huffmanCodeBytes[i], !needFill);
-			sb.append(binaryString);
-		}
-		
-		System.out.println("解码 -> " + sb.toString());
-		
-		return sb.toString();
 	}
 
 	/**
@@ -194,8 +193,6 @@ public class HuffmanCoding {
 			huffmanCodeBinaryStr.append(huffmanCodeMap.get(data));
 		}
 
-		System.out.println("编码 -> " + huffmanCodeBinaryStr.toString());
-		
 		/**
 		 * byteStr 是字符串，其中的每一个值就是对应要返回数组的位数值 因此，这个字符串的长度必须是8的位数
 		 * 
