@@ -8,7 +8,7 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.woodwhale.algorithm</groupId>
+	<groupId>org.woodwhale.datastructure</groupId>
 	<artifactId>algorithm-study</artifactId>
 	<version>1.0</version>
 	<name>algorithm</name>
