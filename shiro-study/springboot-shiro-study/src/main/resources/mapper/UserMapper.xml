@@ -6,7 +6,7 @@
         <id column="id" jdbcType="BIGINT" property="id" />
         <result column="user_name" jdbcType="VARCHAR" property="userName" />
         <result column="password" jdbcType="VARCHAR" property="password" />
-		<result column="perms" jdbcType="VARCHAR" property="roles" />
+		<result column="roles" jdbcType="VARCHAR" property="roles" />
     </resultMap>
 
     <select id="findUserByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">

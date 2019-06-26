@@ -47,5 +47,26 @@ java -jar springboot-shiro-1.0-SNAPSHOT.jar
 
 由于记住我的功能和授权功能是互斥的，所以增加了一个`list page`页面，用来校验记住我功能是否成功有效。
 
+## 博文参考
+
+SpringBoot系列 - 集成Shiro权限管理：
+https://www.xncoding.com/2017/07/07/spring/sb-shiro.html
 
 
+Shiro+JWT+Spring Boot Restful简易教程：
+https://github.com/Smith-Cruise/Spring-Boot-Shiro
+
+Spring Boot教程(十六)：Spring Boot集成shiro：
+https://blog.csdn.net/gnail_oug/article/details/80662553
+
+Shiro用starter方式优雅整合到SpringBoot中：
+https://segmentfault.com/a/1190000014479154
+
+一文看懂安全控制框架Apache Shiro：
+https://mp.weixin.qq.com/s/8gPY-ZnQTmXaXdmqGLaVsQ
+
+Spring Boot + Vue + Shiro 实现前后端分离、权限控制：
+https://mp.weixin.qq.com/s/czLXiMuji8WIP4tmKBDNrw
+
+Spring Boot 整合 Shiro ，两种方式全总结！：
+https://mp.weixin.qq.com/s/JU_-gn-yZ4VJJXTZvo7nZQ

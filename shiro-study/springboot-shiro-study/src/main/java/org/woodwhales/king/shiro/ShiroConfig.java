@@ -3,11 +3,6 @@ package org.woodwhales.king.shiro;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
-import org.apache.shiro.authc.credential.CredentialsMatcher;
-import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
-import org.apache.shiro.codec.Base64;
-import org.apache.shiro.mgt.RememberMeManager;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
@@ -16,6 +11,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.woodwhales.king.shiro.realm.UserRealm;
+
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 
 @Configuration
 public class ShiroConfig {

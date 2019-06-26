@@ -1,6 +1,9 @@
 package org.woodwhales.king.shiro.realm;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
@@ -39,11 +42,31 @@ public class UserRealm extends AuthorizingRealm {
 
 		// 这里的 getPrincipal() 就是认证之后在 doGetAuthenticationInfo() 方法返回回来的 principal
 		User user = (User)SecurityUtils.getSubject().getPrincipal();
-
+		return createSimpleAuthorizationInfo(user);
+	}
+	
+	private SimpleAuthorizationInfo createSimpleAuthorizationInfo(User user) {
 		SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-		log.debug("roles of user : {}" , Arrays.asList(StringUtils.split(user.getRoles(), ",")).toString());
-		info.addStringPermissions(Arrays.asList(StringUtils.split(user.getRoles(), ",")));
+		info.setRoles(getRoleSet(user));
+		info.addStringPermissions(getRoles(user));
 		return info;
+	}
+	
+	private List<String> getRoles(User user) {
+		return Arrays.asList(StringUtils.split(user.getRoles(), ","));
+	}
+	
+	private Set<String> getRoleSet(User user) {
+		log.debug("roles of user : {}" , Arrays.asList(StringUtils.split(user.getRoles(), ",")).toString());
+		
+		List<String> roles = Arrays.asList(StringUtils.split(user.getRoles(), ","));
+		
+		HashSet<String> roleSet = new HashSet<>();
+		roles.stream().forEach(role->{
+			roleSet.add(role);
+		});
+		
+		return roleSet;
 	}
 
 	/**
@@ -70,7 +93,7 @@ public class UserRealm extends AuthorizingRealm {
 		 * principal 不允许为空！ 可以传递当前已认证的对象，方便后期的授权方法进行授权操作
 		 *
 		 */
-		return new SimpleAuthenticationInfo(user, user.getPassword(), "");
+		return new SimpleAuthenticationInfo(user, user.getPassword(), getName());
 	}
 
 	public CredentialsMatcher getCredentialsMatcher() {
