@@ -70,3 +70,39 @@ https://mp.weixin.qq.com/s/czLXiMuji8WIP4tmKBDNrw
 
 Spring Boot 整合 Shiro ，两种方式全总结！：
 https://mp.weixin.qq.com/s/JU_-gn-yZ4VJJXTZvo7nZQ
+
+Springboot + shiro权限管理。这或许是流程最详细、代码最干净、配置最简单的shiro上手项目了。:
+https://www.ctolib.com/zhangyd-c-springboot-shiro.html
+
+SpringBoot整合mybatis、shiro、redis实现基于数据库的细粒度动态权限管理系统实例:
+https://blog.csdn.net/poorcoder_/article/details/71374002
+
+一起来学SpringBoot | 第二十六篇：轻松搞定安全框架（Shiro）:
+https://blog.battcn.com/2018/07/03/springboot/v2-other-shiro/
+
+SpringBoot集成Shiro:
+https://panlf.github.io/2018/07/05/SpringBoot%E9%9B%86%E6%88%90Shiro/
+
+spring-boot-2.0.3不一样系列之shiro - 搭建篇:
+https://cloud.tencent.com/developer/article/1333049
+
+Spring Boot Shiro用户认证:
+https://mrbird.cc/Spring-Boot-shiro%20Authentication.html
+
+（SpringBoot）Shiro安全框架深入解析:
+https://www.javazhiyin.com/24868.html
+
+springboot + shiro之登录人数限制、登录判断重定向、session时间设置:
+https://blog.51cto.com/wyait/2107423
+
+spring boot shiro redis整合基于角色和权限的安全管理-Java编程:
+http://www.leftso.com/blog/238.html
+
+Spring Boot 集成 Shiro 权限管理与密码加盐加密存储:
+https://xlui.me/t/spring-boot-shiro/
+
+自研SpringBoot的Shiro自动配置模块:
+https://www.chenmin.info/2019/01/23/%E8%87%AA%E7%A0%94SpringBoot%E7%9A%84Shiro%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97/
+
+springboot+shiro+JWT 系统权限管理:
+https://www.itwork.club/2018/10/08/springboot-shiro-jwt/
