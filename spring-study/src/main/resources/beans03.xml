@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="car2" class="org.woodwhales.spring.code2.Car">
+		<constructor-arg value="ChangAnMazda" />
+		<constructor-arg value="Ford" />
+		<constructor-arg value="250000" type="float" />
+	</bean>
+
+	<!-- 外部引用bean -->
+	<bean id="person" class="org.woodwhales.spring.code3.Person">
+		<property name="name" value="woodwhales" />
+		<property name="car" ref="car2" />
+	</bean>
+
+	<!-- 内部引用bean -->
+	<bean id="person2" class="org.woodwhales.spring.code3.Person">
+		<property name="name" value="king" />
+		<property name="car">
+			<!-- 内部 bean, 类似于匿名内部类对象. 不能被外部的 bean 来引用, 也没有必要设置 id 属性 -->
+			<bean class="org.woodwhales.spring.code2.Car">
+				<constructor-arg value="BMW" />
+				<constructor-arg value="BMW" />
+				<constructor-arg value="40000" />
+			</bean>
+		</property>
+		<!-- 设置级联属性,先初始化属性才能级联设置 -->
+		<property name="car.maxSpeed" value="3000"/>
+	</bean>
+	
+</beans>

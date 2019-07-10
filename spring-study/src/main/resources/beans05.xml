@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- abstract="true"表示这个bean 是抽象的，不可以实例化，必须有其他bean 继承 
+		 如果不 指定class 属性，那么即使不配置abstract，也是一个抽象bean，即模板bean
+		 
+		 depends-on="" 表示必须关联某个bean，也就是这个bean 依赖了指定的bean
+		 如果前置依赖于多个 Bean，则可以通过逗号，空格或的方式配置 Bean 的名称
+	-->
+	<bean id="address" class="org.woodwhales.spring.code5.Address" 
+					p:city="Beijing" p:street="XiDan" abstract="true" />
+
+	<bean id="tank" class="org.woodwhales.spring.code5.Tank" 
+					p:name="super tank" p:birth="1880"/>
+
+	<!-- 属性配置继承, 继承的功能是可以用来做模板配置 -->
+	<bean id="tank2" p:name="small tank" parent="tank"/>
+
+	<!--  
+		自动装配: 只声明 bean, 而把 bean 之间的关系交给 IOC 容器来完成
+		byType: 根据类型进行自动装配. 但要求 IOC 容器中只有一个类型对应的 bean, 若有多个则无法完成自动装配,会报异常.
+		byName: 若属性名和某一个 bean 的 id 名一致, 即可完成自动装配. 若没有 id 一致的, 则无法完成自动装配
+		
+		在使用 XML 配置时, 自动转配用的不多. 但在基于 注解 的配置时, 自动装配使用的较多.
+	-->
+	<bean id="hero" class="org.woodwhales.spring.code5.Hero"
+				p:name="Super Hero" autowire="byName"/>
+
+</beans>

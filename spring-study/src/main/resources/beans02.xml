@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 注入方式2：构造器注入 -->
+	<bean id="car" class="org.woodwhales.spring.code2.Car">
+		<constructor-arg value="KUGA" index="1" />
+		<constructor-arg value="ChangAnFord" index="0" />
+		<constructor-arg value="250000" type="float" />
+	</bean>
+
+	<bean id="car2" class="org.woodwhales.spring.code2.Car">
+		<constructor-arg value="ChangAnMazda" />
+		<!-- 若字面值中包含特殊字符, 则可以使用 DCDATA 来进行赋值. (了解) -->
+		<constructor-arg>
+			<value><![CDATA[<ATARZA>]]></value>
+		</constructor-arg>
+		<constructor-arg value="250000" type="float" />
+	</bean>
+
+</beans>
