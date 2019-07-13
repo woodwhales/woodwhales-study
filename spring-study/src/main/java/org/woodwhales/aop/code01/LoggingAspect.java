@@ -1,4 +1,4 @@
-package org.woodwhales.spring.code6;
+package org.woodwhales.aop.code01;
 
 import java.util.Arrays;
 
@@ -67,7 +67,7 @@ import org.springframework.stereotype.Component;
 public class LoggingAspect {
 
 	// @Before 表示在目标方法执行之前执行 @Before 标记的方法的方法体. 
-	@Before("execution(public int org.woodwhales.spring.code6.ArithmeticCalculator.*(int, int))")
+	@Before("execution(public int org.woodwhales.aop.code01.ArithmeticCalculator.*(int, int))")
 	public void beforeMethod(JoinPoint joinPoint){
 		String methodName = joinPoint.getSignature().getName();
 		Object [] args = joinPoint.getArgs();
@@ -76,7 +76,7 @@ public class LoggingAspect {
 	}
 	
 	// @After 表示后置通知: 在方法执行之后执行的代码
-	@After("execution(* org.woodwhales.spring.code6.*.*(..))")
+	@After("execution(* org.woodwhales.aop.code01.*.*(..))")
 	public void afterMethod(JoinPoint joinPoint){
 		String methodName = joinPoint.getSignature().getName();
 		System.out.println("afterMethod, The method " + methodName + " ends");
@@ -85,7 +85,7 @@ public class LoggingAspect {
 	/**
 	 * 	在方法正常结束后执行的代码
 	 */
-	@AfterReturning(value = "execution(* org.woodwhales.spring.code6.*.*(..))", returning="result")
+	@AfterReturning(value = "execution(* org.woodwhales.aop.code01.*.*(..))", returning="result")
 	public void afterReturning(JoinPoint joinPoint, Object result) {
 		String methodName = joinPoint.getSignature().getName();
 		Object [] args = joinPoint.getArgs();
@@ -96,14 +96,14 @@ public class LoggingAspect {
 	 * 	异常通知, 在方法抛出异常之后
 	 * 	在方法执行异常的时候才执行的代码，并且可以指定特殊的异常
 	 */
-	@AfterThrowing(value = "execution(* org.woodwhales.spring.code6.*.*(..))", throwing = "exception")
+	@AfterThrowing(value = "execution(* org.woodwhales.aop.code01.*.*(..))", throwing = "exception")
 	public void afterThrowing(JoinPoint joinPoint, Exception exception) {
 		String methodName = joinPoint.getSignature().getName();
 		Object [] args = joinPoint.getArgs();
 		System.out.println("afterReturning, The method " + methodName + " exception = " + exception.getMessage());
 	}
 	
-	@Around("execution(* org.woodwhales.spring.code6.*.*(..))")
+	@Around("execution(* org.woodwhales.aop.code01.*.*(..))")
 	public Object around(ProceedingJoinPoint joinPoint) {
 		Object result = null;
 		

@@ -1,12 +1,12 @@
-package org.woodwhales.spring;
+package org.woodwhales.aop;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.woodwhales.spring.code6.ArithmeticCalculator;
+import org.woodwhales.aop.code02.ArithmeticCalculator;
 
-public class TestCode06 {
-	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans06.xml");
+public class TestCode02 {
+	ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans-aop-code02.xml");
 	
 	@Test
 	public void testAop() {

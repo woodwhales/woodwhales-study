@@ -1,4 +1,4 @@
-package org.woodwhales.spring.code6;
+package org.woodwhales.aop.code02;
 
 public interface ArithmeticCalculator {
 

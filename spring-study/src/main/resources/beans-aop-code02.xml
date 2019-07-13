@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 	<!-- 自动扫描的包 -->
-	<context:component-scan base-package="org.woodwhales.spring.code6" />
+	<context:component-scan base-package="org.woodwhales.aop.code02" />
 
 	<!-- 使 AspectJ 的注解起作用 -->
 	<aop:aspectj-autoproxy/>
