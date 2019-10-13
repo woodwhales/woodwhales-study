@@ -2,7 +2,7 @@
   PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <!--数据库驱动-->
+    <!--引入外部配置文件-->
     <properties resource="generator/init.properties"/>
 
     <context id="Tables"  targetRuntime="MyBatis3">
