@@ -1,14 +1,12 @@
-### MyBatis Generator 逆向工程代码生成工具
+### MyBatis Generator 逆向工程代码生成器工具
 
 #### 使用方法
 
-在`mybatisGeneratorinit.properties`配置文件中配置要生成的表或路径
+在`init.properties`配置文件中配置要生成的表或路径
 
 注意：
 
-- 将 mysql 驱动包放置到 C 盘的根目录下
-
-- `tableName=%` 表示生成所有数据库表
+- `tableName=%` 表示生成所有数据库表，不建议使用
 
 #### 执行命令
 
