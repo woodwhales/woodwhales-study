@@ -1,13 +1,11 @@
-package cn.woodwhales.entity;
+package cn.woodwhales.dto.demo1;
 
 import java.util.Date;
 
 import lombok.Data;
 
 @Data
-public class Person {
-
-	private Long id;
+public class PersonDTO {
 	
 	private String code;
 	

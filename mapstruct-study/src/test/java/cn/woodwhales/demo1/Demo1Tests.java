@@ -1,26 +1,27 @@
-package cn.woodwhales.controller;
+package cn.woodwhales.demo1;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Date;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import cn.woodwhales.dto.demo1.CarDTO;
 import cn.woodwhales.entity.demo1.Car;
 import cn.woodwhales.entity.demo1.CarType;
 import cn.woodwhales.mapping.demo1.CarMapping;
 
-@RestController("/test")
-public class CarController {
+@SpringBootTest
+class Demo1Tests {
 	
 	@Autowired
 	private CarMapping carMapping;
-
-	@ResponseBody
-	@GetMapping("/car")
-	public Object car() {
+	
+	@Test
+	void testCarMapping() {
+		
 		String make = "BMW";
 		int numberOfSeats = 6;
 		CarType carType = new CarType("simple");
@@ -32,6 +33,12 @@ public class CarController {
 		
 		CarDTO carDTO = carMapping.carToCarDTO(car);
 		
-		return carDTO;
+		assertEquals(car.getMake(), carDTO.getMake());
+		assertEquals(car.getNumberOfSeats(), carDTO.getSeatCount());
+		assertEquals(car.getCarType().getType(), carDTO.getType());
+		assertEquals(car.getGmtCreated(), carDTO.getGmtCreated());
+		assertEquals(car.getGmtModified(), carDTO.getGmtModified());
+		
 	}
+
 }

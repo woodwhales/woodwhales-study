@@ -1,4 +1,4 @@
-package cn.woodwhales.dto;
+package cn.woodwhales.dto.demo1;
 
 import java.util.Date;
 

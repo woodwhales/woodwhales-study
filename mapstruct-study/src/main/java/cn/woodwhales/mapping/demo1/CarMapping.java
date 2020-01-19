@@ -1,10 +1,10 @@
-package cn.woodwhales.mapper;
+package cn.woodwhales.mapping.demo1;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-import cn.woodwhales.dto.CarDTO;
-import cn.woodwhales.entity.Car;
+import cn.woodwhales.dto.demo1.CarDTO;
+import cn.woodwhales.entity.demo1.Car;
 
 /**
  * componentModel属性用于指定自动生成的接口实现类的组件类型

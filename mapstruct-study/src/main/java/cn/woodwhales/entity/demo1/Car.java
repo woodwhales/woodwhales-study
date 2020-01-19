@@ -1,4 +1,4 @@
-package cn.woodwhales.entity;
+package cn.woodwhales.entity.demo1;
 
 import java.util.Date;
 

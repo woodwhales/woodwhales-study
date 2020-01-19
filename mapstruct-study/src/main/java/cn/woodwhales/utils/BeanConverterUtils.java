@@ -1,7 +1,7 @@
 package cn.woodwhales.utils;
 
-import cn.woodwhales.dto.CarDTO;
-import cn.woodwhales.entity.Car;
+import cn.woodwhales.dto.demo1.CarDTO;
+import cn.woodwhales.entity.demo1.Car;
 
 public class BeanConverterUtils {
 	
