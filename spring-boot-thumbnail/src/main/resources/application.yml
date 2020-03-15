@@ -1,0 +1,16 @@
+server:
+  address: 0.0.0.0
+  port: 8083
+  tomcat:
+    basedir: ./temp
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+  resources:
+    # 指定静态资源访问路径
+    static-locations: classpath:static/,file:static/
+  thymeleaf:
+    cache: false
+  application:
+    name: spring-boot-thumbnail

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>springboot-image 图片缩略demo</title>
+</head>
+<body>
+<div class="demo">
+    <div class="bheader">
+       <h2>图片上传</h2>
+    </div>
+    <div class="bbody">
+        <form id="upload_form" enctype="multipart/form-data" method="post" th:action="@{./thumbnail}">
+            <h2>请选择上传图片</h2>
+            <div>
+                <input type="file" name="image" id="image"/>
+                <input type="submit" value="上传"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

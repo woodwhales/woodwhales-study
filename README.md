@@ -40,6 +40,10 @@ jdk 1.8 新增特性学习
 
 spring 注解驱动开发学习
 
+## spring-boot-thumbnail
+
+图片文件上传，保存原图同时等比例缩小，保存路径为 jar 包同级目录
+
 ## spring-custom-validation
 
 自定义 validation 校验器注解，集成于 springboot
