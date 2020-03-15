@@ -1,10 +1,6 @@
 package org.woodwhales.validation.demo3;
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.HashMap;
-import java.util.Map;
-
+import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +11,10 @@ import org.woodwhales.validation.demo3.controller.Demo3Controller;
 import org.woodwhales.validation.demo3.dto.User;
 import org.woodwhales.validation.utils.MockPostTools;
 
-import com.alibaba.fastjson.JSON;
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(Demo3Controller.class)
