@@ -7,10 +7,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Service;
 
-@ComponentScans({@ComponentScan("org.woodwhale.king.code01"),
-		@ComponentScan("org.woodwhale.king.code03")
+@ComponentScans({@ComponentScan("org.woodwhale.annotation.code01"),
+		@ComponentScan("org.woodwhale.annotation.code03")
 })
-@ComponentScan(basePackages = {"org.woodwhale.king.code02"},
+@ComponentScan(basePackages = {"org.woodwhale.annotation.code02"},
 					includeFilters = {
 							@Filter( type=FilterType.ANNOTATION, classes= { Service.class })
 					}, useDefaultFilters = false)

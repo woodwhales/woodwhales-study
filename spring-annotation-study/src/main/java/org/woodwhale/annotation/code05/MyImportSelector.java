@@ -7,7 +7,7 @@ public class MyImportSelector implements ImportSelector {
 
 	@Override
 	public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-		return new String[]{"org.woodwhale.king.code05.Blue"};
+		return new String[]{"org.woodwhale.annotation.code05.Blue"};
 	}
 
 }

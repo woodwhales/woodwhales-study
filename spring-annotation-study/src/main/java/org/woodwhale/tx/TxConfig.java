@@ -38,7 +38,7 @@ public class TxConfig {
 		ComboPooledDataSource dataSource = new ComboPooledDataSource();
 		dataSource.setUser("root");
 		dataSource.setPassword("root");
-		dataSource.setDriverClass("com.mysql.jdbc.Driver");
+		dataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
 		dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/spring-annotation-tx?serverTimezone=UTC");
 		return dataSource;
 	}

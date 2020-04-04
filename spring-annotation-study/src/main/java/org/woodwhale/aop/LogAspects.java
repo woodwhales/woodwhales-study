@@ -32,13 +32,13 @@ public class LogAspects {
 	}
 	
 	//JoinPoint一定要出现在参数表的第一位
-	@AfterReturning(value="pointCut()",returning="result")
+	@AfterReturning(value="pointCut()", returning="result")
 	public void logReturn(JoinPoint joinPoint,Object result){
 		System.out.println(""+joinPoint.getSignature().getName()+"正常返回。。。@AfterReturning:运行结果：{"+result+"}");
 	}
 	
-	@AfterThrowing(value="pointCut()",throwing="exception")
-	public void logException(JoinPoint joinPoint,Exception exception){
+	@AfterThrowing(value="pointCut()", throwing="exception")
+	public void logException(JoinPoint joinPoint, Exception exception){
 		System.out.println(""+joinPoint.getSignature().getName()+"异常。。。异常信息：{"+exception+"}");
 	}
 

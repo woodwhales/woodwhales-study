@@ -9,7 +9,7 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-	<bean id="person" class="org.woodwhale.king.code01.Person">
+	<bean id="person" class="org.woodwhale.annotation.code01.Person">
 		<property name="age" value="20"></property>
 		<property name="name" value="zhangsan"></property>
 	</bean>

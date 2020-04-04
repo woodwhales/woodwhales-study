@@ -20,9 +20,9 @@ public class TestCode05 {
         Color colorFactoryBean2 = (Color)applicationContext.getBean("colorFactoryBean");
         System.out.println("bean class type : " + colorFactoryBean1.getClass());
         
-        System.out.println(colorFactoryBean1 == colorFactoryBean2);
+        System.out.println("colorFactoryBean1和colorFactoryBean2是否是相同对象 = " + (colorFactoryBean1 == colorFactoryBean2));
         
-        // 获取工厂对象本身
+        // 使用"&"+id名称获取工厂对象本身
         Object bean = applicationContext.getBean("&colorFactoryBean");
         System.out.println(bean.getClass());
 	}

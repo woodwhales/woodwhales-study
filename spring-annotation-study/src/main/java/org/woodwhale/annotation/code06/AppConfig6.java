@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-@ComponentScan("org.woodwhale.king.code06")
+@ComponentScan("org.woodwhale.annotation.code06")
 @Configuration
 public class AppConfig6 {
 

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.woodwhale.annotation.code08.controller.UserController;
 import org.woodwhale.annotation.code08.entity.User;
 
-@ComponentScan(basePackages = {"org.woodwhale.king.code08"})
+@ComponentScan(basePackages = {"org.woodwhale.annotation.code08"})
 @Configuration
 public class AppConfig8 {
 	

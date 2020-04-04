@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@ComponentScan(basePackages = {"org.woodwhale.king.code01"})
+@ComponentScan(basePackages = {"org.woodwhale.annotation.code01"})
 @Configuration
 public class AppConfig {
 

@@ -19,8 +19,8 @@ public class MyImportBeanDefinitionRegistrar implements ImportBeanDefinitionRegi
 			System.out.println("registerBeanDefinitions --> " + beanName);
 		}
 		
-		boolean blue = registry.containsBeanDefinition("org.woodwhale.king.code05.Blue");
-		boolean color = registry.containsBeanDefinition("org.woodwhale.king.code05.Color");
+		boolean blue = registry.containsBeanDefinition("org.woodwhale.annotation.code05.Blue");
+		boolean color = registry.containsBeanDefinition("org.woodwhale.annotation.code05.Color");
 		
 		if(color && blue) {
 			// 手动创建一个 BeanDefinition 并注册到容器中
