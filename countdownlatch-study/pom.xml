@@ -5,6 +5,8 @@
 	<groupId>org.woodwhales</groupId>
 	<artifactId>countdownlatch</artifactId>
 	<version>1.0.0.0</version>
+	<name>countdownlatch-study</name>
+	<description>countdownlatch-study</description>
 
 	<dependencies>
 		<dependency>
