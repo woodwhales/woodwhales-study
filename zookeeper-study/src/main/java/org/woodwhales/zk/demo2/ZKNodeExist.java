@@ -47,7 +47,7 @@ public class ZKNodeExist implements Watcher {
 		/**
 		 * 参数： path：节点路径 watch：watch
 		 */
-		Stat stat = zkServer.getZookeeper().exists("/imooc-fake", true);
+		Stat stat = zkServer.getZookeeper().exists("/woodwhales-fake", true);
 		if (stat != null) {
 			log.info("查询的节点版本, dataVersion => ", stat.getVersion());
 		} else {

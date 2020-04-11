@@ -307,9 +307,86 @@ nodeCache.start(boolean buildInitial); 开启节点缓存。默认不开启 buil
     });
 ```
 
+## 监听数据节点的增删改
+
+为节点添加 PathChildrenCacheListener 监听器，可以监听节点的增删改动作：
+
+```java
+// 为子节点添加watcher
+// PathChildrenCache: 监听数据节点的增删改，会触发事件
+String childNodePathCache =  nodePath;
+// cacheData: 设置缓存节点的数据状态
+final PathChildrenCache childrenCache = new PathChildrenCache(cto.client, childNodePathCache, true);
+/**
+		 * StartMode: 初始化方式
+		 * POST_INITIALIZED_EVENT：异步初始化，初始化之后会触发事件
+		 * NORMAL：异步初始化
+		 * BUILD_INITIAL_CACHE：同步初始化
+		 */
+childrenCache.start(StartMode.POST_INITIALIZED_EVENT);
+
+List<ChildData> childDataList = childrenCache.getCurrentData();
+System.out.println("当前数据节点的子节点数据列表：");
+for (ChildData cd : childDataList) {
+    String childData = new String(cd.getData());
+    System.out.println(childData);
+}
+
+childrenCache.getListenable().addListener(new PathChildrenCacheListener() {
+    @Override
+    public void childEvent(CuratorFramework client, PathChildrenCacheEvent event) throws Exception {
+
+        switch (event.getType()) {
+            case INITIALIZED:
+                log.info("子节点初始化ok...{}", event.getData().getPath());
+                break;
+            case CHILD_ADDED:
+
+                String path = event.getData().getPath();
+                if (path.equals(ADD_PATH)) {
+                    log.info("添加子节点:{}", event.getData().getPath());
+                    log.info("子节点数据:{}", new String(event.getData().getData()));
+                } else if (path.equals("/super/woodwhales/e")) {
+                    log.info("添加不正确...");
+                }
+
+                break;
+            case CHILD_REMOVED:
+                log.info("删除子节点 : {}", event.getData().getPath());
+                break;
+            case CHILD_UPDATED:
+                log.info("修改子节点路径 : {}", event.getData().getPath());
+                log.info("修改子节点数据: {}",new String(event.getData().getData()));
+                break;
+            default:
+                break;
+        }
+    }
+
+});
+```
+
+## 节点监听小案例
+
+> org.woodwhales.zk.curator.checkConfig
+
+三个客户端监听某个节点，节点的变化会被客户端及时监听到，并作出相应的业务逻辑。
+
+## 权限设置
+
+```java
+	byte[] data = "spiderman".getBytes();
+    cto.client.create().creatingParentsIfNeeded()
+        .withMode(CreateMode.PERSISTENT)
+        .withACL(acls, true) // 开启递归设置权限，仅限当前创建的节点，以前存在的节点是不会设置权限的
+        .forPath(nodePath, data);
+```
 
 
-参考：
+
+
+
+## 参考资料
 
 [ZooKeeper 客户端之 Curator](https://winrains.cn/archives/10263)
 

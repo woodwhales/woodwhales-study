@@ -39,9 +39,7 @@ public class ZKNodeOperator implements Watcher {
 	}
 	
 	/**
-	 * 
-	 * @Title: ZKOperatorDemo.java
-	 * @Description: 创建zk节点
+	 * 创建zk节点
 	 */
 	public void createZKNode(String path, byte[] data, List<ACL> acls) {
 		

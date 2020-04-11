@@ -208,6 +208,7 @@ public class CuratorOperator {
 		}
 		
 		childrenCache.getListenable().addListener(new PathChildrenCacheListener() {
+			@Override
 			public void childEvent(CuratorFramework client, PathChildrenCacheEvent event) throws Exception {
 				
 				switch (event.getType()) {
