@@ -1,5 +1,6 @@
 package org.woodwhales.io;
 
+import org.junit.After;
 import org.junit.Before;
 
 import java.io.File;
@@ -19,17 +20,17 @@ public class BaseDemo {
     /**
      * 测试文件，含有文本内容
      */
-    protected File testContentFile;
+    protected String testContentFileName = "testContent.txt";
+
+    /**
+     * 测试文件，含有文本内容
+     */
+    protected String testStringContentFileName = "testStringContent.txt";
 
     /**
      * 测试图片文件的文件名
      */
     protected String testImageFileName = "Inuyasha.jpg";
-
-    /**
-     * 测试图片文件
-     */
-    protected File testImageFile;
 
     @Before
     public void init() {
@@ -39,13 +40,14 @@ public class BaseDemo {
         String resourcesPath = systemClassLoader.getResource("").getPath();
         basePath = resourcesPath;
 
-        File parentFile = new File(basePath).getParentFile();
+        File baseFile = new File(basePath);
+        File parentFile = baseFile.getParentFile();
         baseParentPath = parentFile.getAbsolutePath();
-
-        testContentFile = new File(systemClassLoader.getResource("testContent.txt").getPath());
-        testImageFile = new File(systemClassLoader.getResource(testImageFileName).getPath());
     }
 
-
+    @After
+    public void after() {
+        System.out.println("this test process is done");
+    }
 
 }

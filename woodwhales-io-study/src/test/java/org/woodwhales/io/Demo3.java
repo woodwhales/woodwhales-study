@@ -19,7 +19,7 @@ public class Demo3 extends BaseDemo {
      */
     @Test
     public void testFileInputStreamRead1() {
-        try (FileInputStream fis = new FileInputStream(testContentFile)){
+        try (FileInputStream fis = new FileInputStream(basePath + testContentFileName)){
             int byteContent;
             while ((byteContent = fis.read()) != -1) {
                 System.out.print((char)byteContent);
@@ -40,7 +40,7 @@ public class Demo3 extends BaseDemo {
     @Test
     public void testFileInputStreamRead2() {
         byte[] buffer = new byte[8];
-        try (FileInputStream fis = new FileInputStream(testContentFile)){
+        try (FileInputStream fis = new FileInputStream(basePath + testContentFileName)){
             // 实际读取到的字符长度
             int readByteContentLength;
             while ((readByteContentLength = fis.read(buffer)) != -1) {

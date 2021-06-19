@@ -2,7 +2,6 @@ package org.woodwhales.io;
 
 import org.junit.Test;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -14,7 +13,7 @@ public class Demo5 extends  BaseDemo {
 
     @Test
     public void test() {
-        File source = testImageFile;
+        String source = basePath + testImageFileName;
         String target = basePath + "back.jpg";
 
         try (FileInputStream fis = new FileInputStream(source);
