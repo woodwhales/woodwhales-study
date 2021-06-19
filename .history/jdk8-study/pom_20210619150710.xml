@@ -8,7 +8,7 @@
     <artifactId>jdk8-study</artifactId>
     <version>1.0.0</version>
 
-    <dependencies>
+<dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
