@@ -32,8 +32,13 @@ public class BaseDemo {
      */
     protected String testImageFileName = "Inuyasha.jpg";
 
+    /**
+     * 内容字符编码为 gbk 格式的文件名
+     */
+    protected String testGbkFileName = "testGbkContent.txt";
+
     @Before
-    public void init() {
+    public final void init() {
         ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
 
         // target/test-classes 目录
@@ -46,7 +51,7 @@ public class BaseDemo {
     }
 
     @After
-    public void after() {
+    public final void after() {
         System.out.println("this test process is done");
     }
 

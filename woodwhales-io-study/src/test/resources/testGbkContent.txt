@@ -1,0 +1,2 @@
+this file content code is gbk
+gbk 格式文件
