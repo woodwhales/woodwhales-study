@@ -9,7 +9,7 @@ import java.io.IOException;
  * java.io.FileInputStream#read() 方法的使用
  * java.io.FileInputStream#read(byte[]) 方法的使用
  */
-public class Demo3 extends BaseDemo {
+public class Demo3 extends BaseIODemo {
 
     /**
      * 使用 FileInputStream 读取文件内容

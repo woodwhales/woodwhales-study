@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * 使用 FileInputStream 和 FileOutputStream 实现文件拷贝
  */
-public class Demo5 extends  BaseDemo {
+public class Demo5 extends BaseIODemo {
 
     @Test
     public void test() {

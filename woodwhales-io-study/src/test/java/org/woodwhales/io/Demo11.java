@@ -9,7 +9,7 @@ import java.io.*;
  * 使用 BufferedInputStream 和 BufferedOutputStream 增强对 FileInputStream 和 FileOutputStream 使用，实现文件拷贝
  *
  */
-public class Demo11 extends BaseDemo {
+public class Demo11 extends BaseIODemo {
 
     @Test
     public void test() {

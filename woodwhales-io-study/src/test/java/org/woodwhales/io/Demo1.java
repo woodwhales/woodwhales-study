@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * 创建文件的三种方式
  */
-public class Demo1 extends BaseDemo {
+public class Demo1 extends BaseIODemo {
 
     /**
      * 创建文件方式1

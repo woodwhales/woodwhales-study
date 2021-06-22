@@ -9,7 +9,7 @@ import java.io.*;
  * 实现文件拷贝
  * 注意：BufferedReader 和 BufferedWriter 不要操作二进制文件，只能操作文本文件
  */
-public class Demo10 extends BaseDemo {
+public class Demo10 extends BaseIODemo {
 
     @Test
     public void test() {

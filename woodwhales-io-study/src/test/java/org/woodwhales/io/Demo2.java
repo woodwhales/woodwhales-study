@@ -7,7 +7,7 @@ import java.io.File;
 /**
  * File 对象的常用方法
  */
-public class Demo2 extends BaseDemo {
+public class Demo2 extends BaseIODemo {
 
     @Test
     public void test() {

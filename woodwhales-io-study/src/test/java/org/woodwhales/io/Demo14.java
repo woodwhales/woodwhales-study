@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 /**
  * 使用 java.io.InputStreamReader 获取指定字符集的输入流
  */
-public class Demo14 extends BaseDemo {
+public class Demo14 extends BaseIODemo {
 
     /**
      * 使用 BufferedInputStream 读取和程序不是一致的字符集文件时，读取到的文件内容是乱码的

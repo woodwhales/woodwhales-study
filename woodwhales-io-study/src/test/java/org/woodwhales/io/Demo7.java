@@ -13,7 +13,7 @@ import java.io.IOException;
  *
  * 写完数据之后，一定要使用 flush() 方法
  */
-public class Demo7 extends BaseDemo {
+public class Demo7 extends BaseIODemo {
 
     @Test
     public void test1() {

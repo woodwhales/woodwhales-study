@@ -7,7 +7,7 @@ import java.io.*;
 /**
  * 使用 java.io.ObjectInputStream 将文件中的数据反序列化
  */
-public class Demo13 extends BaseDemo {
+public class Demo13 extends BaseIODemo {
 
     @Test
     public void test() {

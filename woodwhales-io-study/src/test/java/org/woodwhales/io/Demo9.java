@@ -7,7 +7,7 @@ import java.io.*;
 /**
  * java.io.BufferedWriter 包装类
  */
-public class Demo9 extends BaseDemo {
+public class Demo9 extends BaseIODemo {
 
     @Test
     public void test() {

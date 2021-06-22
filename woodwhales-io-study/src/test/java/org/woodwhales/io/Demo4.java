@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * java.io.FileOutputStream#write(int) 方法的使用
  */
-public class Demo4 extends BaseDemo {
+public class Demo4 extends BaseIODemo {
 
     /**
      * java.io.FileOutputStream#write(int)

@@ -11,7 +11,7 @@ import java.io.IOException;
  * java.io.Reader#read(char[]) 方法的使用
  *
  */
-public class Demo6 extends BaseDemo {
+public class Demo6 extends BaseIODemo {
 
     /**
      *

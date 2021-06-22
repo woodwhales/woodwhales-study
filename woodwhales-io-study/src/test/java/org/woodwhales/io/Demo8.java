@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * java.io.BufferedReader 包装类
  */
-public class Demo8 extends BaseDemo {
+public class Demo8 extends BaseIODemo {
 
     @Test
     public void test() {

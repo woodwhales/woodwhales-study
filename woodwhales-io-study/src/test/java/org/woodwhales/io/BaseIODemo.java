@@ -5,7 +5,7 @@ import org.junit.Before;
 
 import java.io.File;
 
-public class BaseDemo {
+public class BaseIODemo {
 
     /**
      * 测试文件根目录

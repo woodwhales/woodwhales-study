@@ -11,7 +11,7 @@ import java.io.ObjectOutputStream;
  *
  * java.io.ObjectOutputStream#writeObject(java.lang.Object) 的参数对象必须实现 Serializable 接口
  */
-public class Demo12 extends BaseDemo {
+public class Demo12 extends BaseIODemo {
 
     @Test
     public void test() {

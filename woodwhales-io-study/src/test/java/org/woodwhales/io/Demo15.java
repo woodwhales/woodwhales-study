@@ -9,7 +9,7 @@ import java.io.OutputStreamWriter;
 /**
  * 使用 java.io.OutputStreamWriter 输出指定字符集文本内容
  */
-public class Demo15 extends BaseDemo {
+public class Demo15 extends BaseIODemo {
 
     @Test
     public void test() {
