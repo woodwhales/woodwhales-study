@@ -82,6 +82,7 @@ public class CacheLoaderTest {
     public void testRemovalNotification() {
         RemovalListener<String, String> listener = notification -> {
             if(notification.wasEvicted()) {
+                System.out.println("notification => " + notification);
                 RemovalCause removalCause = notification.getCause();
                 assertEquals(RemovalCause.SIZE, removalCause);
                 assertEquals("wood", notification.getKey());
@@ -89,11 +90,13 @@ public class CacheLoaderTest {
         };
         LoadingCache<String, String> cache = CacheBuilder.newBuilder()
                                                 .maximumSize(3)
+                                                .removalListener(listener)
                                                 .build(CacheLoader.from(String::toUpperCase));
 
         cache.getUnchecked("wood");
         cache.getUnchecked("woods");
         cache.getUnchecked("woodwhales");
+        cache.getUnchecked("woodwhales2");
     }
 
     /**
