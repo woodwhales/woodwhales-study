@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>cn.woodwhales</groupId>
-    <artifactId>mapstruct</artifactId>
+    <artifactId>mapstruct-study</artifactId>
     <version>1.0.0</version>
     <name>mapstruct-study</name>
     <description>mapstruct-study</description>

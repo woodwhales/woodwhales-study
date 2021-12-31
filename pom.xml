@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.woodwhales</groupId>
+    <version>1.0.0</version>
+    <artifactId>woodwhales-study</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>algorithm-study</module>
+        <module>apache-poi-study</module>
+        <module>concurrent-study</module>
+        <module>countdownlatch-study</module>
+        <module>generate-mapper</module>
+        <module>guava-study</module>
+        <module>jdk8-study</module>
+        <module>mapstruct-study</module>
+        <module>powermock-study</module>
+        <module>shiro-study/springboot-shiro-study</module>
+        <module>shiro-study/springboot-shiro-thymeleaf-study</module>
+        <module>spring-annotation-study</module>
+        <module>spring-boot-thumbnail</module>
+        <module>spring-custom-validation</module>
+        <module>spring-study</module>
+        <module>springsecurity-study/king-security</module>
+        <module>swagger-study</module>
+        <module>woodwhales-io-study</module>
+        <module>zookeeper-curator-study</module>
+        <module>zookeeper-study</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+</project>

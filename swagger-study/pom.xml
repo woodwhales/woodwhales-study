@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.woodwhales</groupId>
-	<artifactId>swagger</artifactId>
+	<artifactId>swagger-study</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>swagger-study</name>
 	<description>swagger-study</description>

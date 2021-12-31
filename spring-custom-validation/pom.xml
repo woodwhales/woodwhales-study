@@ -9,6 +9,7 @@
 		<version>2.2.5.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>org.woodwhales</groupId>
 	<artifactId>spring-custom-validation</artifactId>
 	<version>1.0.0</version>
@@ -32,9 +33,9 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>org.woodwhales.common</groupId>
+			<groupId>cn.woodwhales.common</groupId>
 			<artifactId>woodwhales-common</artifactId>
-			<version>1.2.0</version>
+			<version>3.7.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -66,6 +67,12 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
 	</dependencies>
 
 	<build>

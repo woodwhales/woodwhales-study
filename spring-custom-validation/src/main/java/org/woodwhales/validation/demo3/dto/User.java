@@ -1,9 +1,9 @@
 package org.woodwhales.validation.demo3.dto;
 
+import cn.woodwhales.common.validation.EnumValidator;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.woodwhales.validation.EnumValidator;
 import org.woodwhales.validation.demo3.enums.StatusEnum;
 
 @Data

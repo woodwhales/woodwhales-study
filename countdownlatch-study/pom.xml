@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.woodwhales</groupId>
-	<artifactId>countdownlatch</artifactId>
+	<artifactId>countdownlatch-study</artifactId>
 	<version>1.0.0.0</version>
 	<name>countdownlatch-study</name>
 	<description>countdownlatch-study</description>

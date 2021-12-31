@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.woodwhales</groupId>
-    <artifactId>guava</artifactId>
+    <artifactId>guava-study</artifactId>
     <version>1.0.0.0</version>
     <name>guava</name>
     <description>woodwhales-guava-study</description>

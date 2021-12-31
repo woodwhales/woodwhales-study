@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.woodwhales</groupId>
-	<artifactId>zk</artifactId>
+	<artifactId>zookeeper-study</artifactId>
 	<version>1.0.0</version>
 	<name>zookeeper-study</name>
 	<description>zookeeper-study</description>

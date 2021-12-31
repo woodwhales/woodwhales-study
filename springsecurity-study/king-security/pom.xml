@@ -7,6 +7,11 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
+	<modules>
+		<module>king-security-core</module>
+		<module>king-security-browser</module>
+	</modules>
+
 	<properties>
 		<king.security.version>1.0.0</king.security.version>
 		<platform-bom-version>Brussels-SR4</platform-bom-version>
@@ -16,6 +21,17 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.woodwhales</groupId>
+				<artifactId>king-security-browser</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+			<dependency>
+				<groupId>org.woodwhales</groupId>
+				<artifactId>king-security-core</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+
 			<!-- https://platform.spring.io/platform/ -->
 			<dependency>
 				<groupId>io.spring.platform</groupId>
@@ -57,8 +73,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	<modules>
-		<module>king-security-core</module>
-		<module>king-security-browser</module>
-	</modules>
+
 </project>
