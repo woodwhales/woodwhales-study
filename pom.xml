@@ -30,6 +30,7 @@
         <module>woodwhales-io-study</module>
         <module>zookeeper-curator-study</module>
         <module>zookeeper-study</module>
+        <module>juc-study</module>
     </modules>
 
     <properties>
