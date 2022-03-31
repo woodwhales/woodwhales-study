@@ -6,6 +6,7 @@
           class="el-menu-vertical-demo"
           @open="handleOpen"
           @close="handleClose"
+          :default-active="$route.path"
           router>
           <el-menu-item index="/linkMgt">
             <i class="el-icon-s-grid"></i>
@@ -66,7 +67,6 @@ export default {
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
-    line-height: 160px;
   }
 
   body > .el-container {
