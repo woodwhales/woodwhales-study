@@ -31,6 +31,7 @@
         <module>zookeeper-curator-study</module>
         <module>zookeeper-study</module>
         <module>juc-study</module>
+        <module>httpclient-study</module>
     </modules>
 
     <properties>
