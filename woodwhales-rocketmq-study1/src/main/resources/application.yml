@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: woodwhales-rocketmq-demo
+server:
+  address: 0.0.0.0
+  port: 9090
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: producer_group
+    access-key: woodwhales
+    secret-key: woodwhales

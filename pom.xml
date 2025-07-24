@@ -26,15 +26,16 @@
         <module>spring-custom-validation</module>
         <module>spring-study</module>
         <module>springsecurity-study/king-security</module>
-        <module>swagger-study</module>
         <module>woodwhales-io-study</module>
         <module>zookeeper-curator-study</module>
         <module>zookeeper-study</module>
         <module>juc-study</module>
+        <module>woodwhales-rocketmq-study1</module>
+        <module>woodwhales-rocketmq-study2</module>
     </modules>
 
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>21</java.version>
     </properties>
 
 </project>
