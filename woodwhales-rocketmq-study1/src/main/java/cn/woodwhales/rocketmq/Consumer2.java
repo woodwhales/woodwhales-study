@@ -38,8 +38,8 @@ public class Consumer2 {
 
     private RPCHook rpcHook = new AclClientRPCHook(new SessionCredentials("rocketmq_b", "rocketmq_b"));
 
-    @Bean(value = "Consumer2", initMethod = "start", destroyMethod = "shutdown")
-    public MQPushConsumer eventProducer() throws Exception {
+    @Bean(value = "pushConsumer", initMethod = "start", destroyMethod = "shutdown")
+    public MQPushConsumer pushConsumer() throws Exception {
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer(rpcHook);
         consumer.setConsumerGroup("topic_b_group");
         consumer.setNamesrvAddr(namesrvAddr);

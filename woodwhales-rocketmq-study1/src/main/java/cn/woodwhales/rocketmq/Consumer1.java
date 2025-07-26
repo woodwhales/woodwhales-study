@@ -14,7 +14,7 @@ import java.nio.charset.Charset;
 @Slf4j
 @Component
 @RocketMQMessageListener(
-        nameServer = "${rocketmq.name-server:}",
+        nameServer = "${rocketmq.name-server}",
         consumerGroup = "topic_a_group",
         topic = "topic_a",
         accessKey = "rocketmq_a",
